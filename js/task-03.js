@@ -20,7 +20,6 @@ gallery.style.listStyle = 'none'
 gallery.style.gap = '20px'
 gallery.style.justifyContent = 'center'
 gallery.style.backgroundColor = '#212121'
-console.log(gallery)
 
 
 const createNewImages = ({ url, alt }) =>

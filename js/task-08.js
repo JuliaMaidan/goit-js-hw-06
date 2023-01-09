@@ -3,7 +3,9 @@ const form = document.querySelector('.login-form')
 form.addEventListener('submit', onFormSubmit)
 
 function onFormSubmit(event) {
-    event.preventDefault()
+  event.preventDefault()
+  
+  let data = [];
 
 const {
     elements: { email, password }
@@ -12,14 +14,10 @@ const {
   if (email.value === "" || password.value === "") {
     return alert("Всі поля повинні бути заповнені!")
   } else {
-    // console.log(`Email: ${email.value}, Password: ${password.value}`)
-    const formData = new FormData(event.currentTarget)
-    formData.forEach((value, name) => {
-        console.log('Input type', name )
-        console.log(`${name} value`, value)
-    
-        event.currentTarget.reset();
-    });
+    data.push({email: email.value, password: password.value})
+    console.log(data)
+
+    event.currentTarget.reset();
   }
 }
 

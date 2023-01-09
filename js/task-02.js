@@ -27,4 +27,3 @@ newItem5.textContent = ingredients[5]
 
 const list = document.querySelector('ul#ingredients')
 list.append(newItem, newItem1, newItem2, newItem3, newItem4, newItem5)
-console.log(list)
