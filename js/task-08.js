@@ -4,8 +4,6 @@ form.addEventListener('submit', onFormSubmit)
 
 function onFormSubmit(event) {
   event.preventDefault()
-  
-  let data = [];
 
 const {
     elements: { email, password }
@@ -14,8 +12,7 @@ const {
   if (email.value === "" || password.value === "") {
     return alert("Всі поля повинні бути заповнені!")
   } else {
-    data.push({email: email.value, password: password.value})
-    console.log(data)
+    console.log({ email: email.value, password: password.value})
 
     event.currentTarget.reset();
   }
